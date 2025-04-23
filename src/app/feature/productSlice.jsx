@@ -13,9 +13,7 @@ export const productSlice = createSlice({
             state.productList.push(action.payload)
         },
         deleteProduct: (state, action) => {
-            console.log(action.payload, "eiuoisd")
-          state.productList =   state.productList.filter((i) => i.id !== action.payload)
-
+          state.productList = state.productList.filter((val ,index) => index !== action.payload)
         }
         
     }
